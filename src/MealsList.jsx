@@ -22,18 +22,18 @@ const MealsList = () => {
 
     return (
         <div>
-            <h2>Liste des recettes de cuisine :</h2>
-            <ul>
-                {meals.map((meal) => (
-                    <li key={meal.idMeal}>{meal.strMeal}</li>
-                ))}
-            </ul>
+            <h2 className="text-center">Liste des recettes de cuisine :</h2>
+            <div className="container">
+                <div className="row">
+                    {meals.map((meal) => (
+                        <div key={meal.idMeal} className="col-md-4">
+                            <p className="d-flex flex-column align-items-center">{meal.strMeal}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
     );
 };
 
 export default MealsList;
-
-/////
-
-

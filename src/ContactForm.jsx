@@ -21,30 +21,55 @@ const ContactForm = () => {
     };
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Name:
-                    <input type="text" name="name" value={formData.name} onChange={handleChange} />
-                </label>
-                <br />
-                <label>
-                    Email:
-                    <input type="email" name="email" value={formData.email} onChange={handleChange} />
-                </label>
-                <br />
-                <label>
-                    Message:
-                    <textarea name="message" value={formData.message} onChange={handleChange} />
-                </label>
-                <br />
-                <button type="submit">Submit</button>
-            </form>
+        <div className="container">
+            <div className="row justify-content-center">
+                <div className="col-md-6">
+                    <form onSubmit={handleSubmit}>
+                        <div className="form-group">
+                            <label htmlFor="name">Name:</label>
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                className="form-control"
+                                value={formData.name}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="email">Email:</label>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                className="form-control"
+                                value={formData.email}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="message">Message:</label>
+                            <textarea
+                                name="message"
+                                id="message"
+                                className="form-control"
+                                value={formData.message}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <button type="submit" className="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
 
-            <h2>Infos soumises :</h2>
-            <p>Nom: {formData.name}</p>
-            <p>Email: {formData.email}</p>
-            <p>Message: {formData.message}</p>
+            <div className="row justify-content-center mt-4">
+                <div className="col-md-6">
+                    <h2>Infos soumises :</h2>
+                    <p>Nom: {formData.name}</p>
+                    <p>Email: {formData.email}</p>
+                    <p>Message: {formData.message}</p>
+                </div>
+            </div>
         </div>
     );
 };
