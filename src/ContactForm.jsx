@@ -23,10 +23,10 @@ const ContactForm = () => {
     return (
         <div className="container">
             <div className="row justify-content-center">
-                <div className="col-md-6">
+                <div className="col-md-6 text-center"> {/* Ajout de la classe "text-center" ici */}
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <label htmlFor="name">Name:</label>
+                            <label htmlFor="name">Name</label>
                             <input
                                 type="text"
                                 name="name"
@@ -37,7 +37,7 @@ const ContactForm = () => {
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="email">Email:</label>
+                            <label htmlFor="email">Email</label>
                             <input
                                 type="email"
                                 name="email"
@@ -48,7 +48,7 @@ const ContactForm = () => {
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="message">Message:</label>
+                            <label htmlFor="message">Message</label>
                             <textarea
                                 name="message"
                                 id="message"

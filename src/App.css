@@ -63,3 +63,10 @@
   font-weight: bold;
   margin-top: 20px;
 }
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+
