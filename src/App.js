@@ -8,6 +8,7 @@ import MealsList from './MealsList';
 
 import RandomMeal from './RandomMeal';
 import SearchMeals from './SearchMeals';
+import AllCategory from './AllCategory';
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
       <SearchMeals />
       <RandomMeal />
       <MealsList />
+      <AllCategory />
       <ContactForm />
+
       <Footer />
 
     </div>
